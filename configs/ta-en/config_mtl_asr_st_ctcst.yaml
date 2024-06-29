@@ -12,8 +12,8 @@ target_unigram:
    label_smoothing: 0.1
 source_unigram:
    decoder_type: ctc
-   dict: /content/datasets/cvss/cvss-c/fr-en/src_unigram6000/spm_unigram_fr.txt
-   data: /content/datasets/cvss/cvss-c/fr-en/src_unigram6000
+   dict: /content/datasets/cvss/cvss-c/ta-en/src_unigram6000/spm_unigram_fr.txt
+   data: /content/datasets/cvss/cvss-c/ta-en/src_unigram6000
    loss_weight: 4.0
    rdrop_alpha: 0.0
    decoder_args:
@@ -24,8 +24,8 @@ source_unigram:
    label_smoothing: 0.1
 ctc_target_unigram:
    decoder_type: ctc
-   dict: /content/datasets/cvss/cvss-c/fr-en/tgt_unigram6000/spm_unigram_fr.txt
-   data: /content/datasets/cvss/cvss-c/fr-en/tgt_unigram6000
+   dict: /content/datasets/cvss/cvss-c/ta-en/tgt_unigram6000/spm_unigram_fr.txt
+   data: /content/datasets/cvss/cvss-c/ta-en/tgt_unigram6000
    loss_weight: 4.0
    rdrop_alpha: 0.0
    decoder_args:
