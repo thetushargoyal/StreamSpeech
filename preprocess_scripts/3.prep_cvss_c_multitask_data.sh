@@ -1,6 +1,6 @@
 lang=$1
-CVSS_ROOT=/data/zhangshaolei/datasets/cvss/cvss-c
-ROOT=/data/zhangshaolei/StreamSpeech
+CVSS_ROOT=/content/datasets/cvss/cvss-c
+ROOT=/content/StreamSpeech
 
 
 PYTHONPATH=$ROOT/fairseq python $ROOT/preprocess_scripts/prep_cvss_c_multitask_data.py \

@@ -1,6 +1,6 @@
 lang=$1
-DATA_ROOT=/data/zhangshaolei/datasets/cvss/cvss-c/$lang-en
-ROOT=/data/zhangshaolei/StreamSpeech
+DATA_ROOT=/content/datasets/cvss/cvss-c/$lang-en
+ROOT=/content/StreamSpeech
 PRETRAIN_ROOT=$ROOT/pretrain_models
 
 N_CLUSTERS=100 #<number_of_clusters_used_for_kmeans>
@@ -9,8 +9,6 @@ CKPT_PATH=$PRETRAIN_ROOT/mHuBERT/mhubert_base_vp_en_es_fr_it3.pt #<path_of_pretr
 LAYER=11 #<layer_of_acoustic_model_to_extract_features_from>
 MANIFEST=$DATA_ROOT #<tab_separated_manifest_of_audio_files_for_training_kmeans>
 KM_MODEL_PATH=$ROOT/preprocess_scripts/mhubert.km1000.layer11.pt #<output_path_of_the_kmeans_model>
-
-
 
 PYTHONPATH=$ROOT/fairseq python $ROOT/preprocess_scripts/create_manifest.py --data-root $DATA_ROOT
 

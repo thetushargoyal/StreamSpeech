@@ -1,7 +1,7 @@
 lang=$1
-CVSS_ROOT=/data/zhangshaolei/datasets/cvss/cvss-c
-COVOST2_ROOT=/data/zhangshaolei/datasets/covost2
-ROOT=/data/zhangshaolei/StreamSpeech
+CVSS_ROOT=/content/datasets/cvss/cvss-c
+COVOST2_ROOT=/content/datasets/covost2
+ROOT=/content/StreamSpeech
 PRETRAIN_ROOT=$ROOT/pretrain_models
 
 PYTHONPATH=$ROOT/fairseq python $ROOT/preprocess_scripts/prep_cvss_c_multilingual_data.py \
