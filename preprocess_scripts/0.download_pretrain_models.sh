@@ -1,4 +1,4 @@
-ROOT=/data/zhangshaolei/StreamSpeech
+ROOT=/content/StreamSpeech
 PRETRAIN_ROOT=$ROOT/pretrain_models
 
 
