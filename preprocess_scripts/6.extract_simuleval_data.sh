@@ -1,7 +1,7 @@
 lang=$1
-CVSS_ROOT=/content/datasets/cvss/cvss-c
-COVOST2_ROOT=/content/datasets/covost2
-ROOT=/content/StreamSpeech
+CVSS_ROOT=/kaggle/working/datasets/cvss/cvss-c
+COVOST2_ROOT=/kaggle/working/datasets/covost2
+ROOT=/kaggle/working/StreamSpeech
 
 
 PYTHONPATH=$ROOT/fairseq python $ROOT/preprocess_scripts/extract_simuleval_data.py \

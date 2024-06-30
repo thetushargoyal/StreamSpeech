@@ -1,6 +1,6 @@
 lang=$1
-CVSS_ROOT=/content/datasets/cvss/cvss-c
-ROOT=/content/StreamSpeech
+CVSS_ROOT=/kaggle/working/datasets/cvss/cvss-c
+ROOT=/kaggle/working/StreamSpeech
 
 
 for split in train dev test

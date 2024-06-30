@@ -1,6 +1,6 @@
 lang=$1
-CVSS_ROOT=/content/datasets/cvss/cvss-c
-ROOT=/content/StreamSpeech
+CVSS_ROOT=/kaggle/working/datasets/cvss/cvss-c
+ROOT=/kaggle/working/StreamSpeech
 
 PYTHONPATH=$ROOT/fairseq python $ROOT/preprocess_scripts/convert_s2st_tsv_to_s2tt_mtl_tsv.py \
     --s2st-tsv-dir $CVSS_ROOT/${lang}-en/fbank2unit \

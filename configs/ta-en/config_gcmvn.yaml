@@ -1,5 +1,5 @@
 global_cmvn:
-  stats_npz_path: /content/datasets/cvss/cvss-c/ta-en/gcmvn.npz 
+  stats_npz_path: /kaggle/working/datasets/cvss/cvss-c/ta-en/gcmvn.npz 
 input_channels: 1
 input_feat_per_channel: 80
 specaugment:
@@ -16,6 +16,6 @@ transforms:
   - global_cmvn
   - specaugment
 vocoder:
-  checkpoint: /content/StreamSpeech/pretrain_models/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/g_00500000
-  config: /content/StreamSpeech/pretrain_models/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/config.json
+  checkpoint: /kaggle/working/StreamSpeech/pretrain_models/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/g_00500000
+  config: /kaggle/working/StreamSpeech/pretrain_models/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/config.json
   type: code_hifigan
