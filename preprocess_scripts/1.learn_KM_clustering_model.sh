@@ -1,6 +1,6 @@
 lang=$1
-DATA_ROOT=/kaggle/working/datasets/cvss/cvss-c/$lang-en
-ROOT=/kaggle/working/StreamSpeech
+DATA_ROOT=/content/datasets/cvss/cvss-c/$lang-en
+ROOT=/content/StreamSpeech
 PRETRAIN_ROOT=$ROOT/pretrain_models
 
 N_CLUSTERS=100 #<number_of_clusters_used_for_kmeans>

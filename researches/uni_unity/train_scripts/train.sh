@@ -1,7 +1,7 @@
 export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 LANG=fr
-DATA_ROOT=/data/zhangshaolei/datasets/cvss/cvss-c
+DATA_ROOT=/content/datasets/cvss/cvss-c
 DATA=$DATA_ROOT/${LANG}-en/fbank2unit
 model=uni_unity
 

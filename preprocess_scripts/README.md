@@ -15,10 +15,10 @@ These scripts process the CVSS-C data from scratch for training and testing Stre
 
   - [CVSS: A Massively Multilingual Speech-to-Speech Translation Corpus](https://github.com/google-research-datasets/cvss)
 
-- The directory structure of data is as follows. Replace `/data/zhangshaolei/datasets` with your local address `XXX`.
+- The directory structure of data is as follows. Replace `/content/datasets` with your local address `XXX`.
 
 ```
-/data/zhangshaolei/datasets
+/content/datasets
 ├── covost2/
 │   ├── fr/
 │   │   ├── clips/
@@ -173,7 +173,7 @@ bash preprocess.sh
 - The directory structure of CVSS-C should be:
 
 ```
-/data/zhangshaolei/datasets
+/content/datasets
 ├── covost2/
 │   └── ... # no change
 └── cvss/

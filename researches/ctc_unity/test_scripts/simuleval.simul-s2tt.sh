@@ -1,10 +1,10 @@
 export CUDA_VISIBLE_DEVICES=0
 
-ROOT=/data/zhangshaolei/StreamSpeech
-DATA_ROOT=/data/zhangshaolei/datasets/cvss/cvss-c
+ROOT=/content/StreamSpeech
+DATA_ROOT=/content/datasets/cvss/cvss-c
 
 LANG=fr
-file=/data/zhangshaolei/StreamSpeech_model/streamspeech.simultaneous.${LANG}-en.pt
+file=/content/StreamSpeech_model/streamspeech.simultaneous.${LANG}-en.pt
 output_dir=$ROOT/res/streamspeech.simultaneous.${LANG}-en/simul-s2tt
 
 chunk_size=960

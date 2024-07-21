@@ -91,7 +91,7 @@ https://github.com/ictnlp/StreamSpeech/assets/34680227/4d9bdabf-af66-4320-ae7d-0
 
 #### (1) Config Files
 
-Replace `/data/zhangshaolei/StreamSpeech` in files [configs/fr-en/config_gcmvn.yaml](./configs/fr-en/config_gcmvn.yaml) and [configs/fr-en/config_mtl_asr_st_ctcst.yaml](./configs/fr-en/config_mtl_asr_st_ctcst.yaml) with your local address of StreamSpeech repo.
+Replace `/content/StreamSpeech` in files [configs/fr-en/config_gcmvn.yaml](./configs/fr-en/config_gcmvn.yaml) and [configs/fr-en/config_mtl_asr_st_ctcst.yaml](./configs/fr-en/config_mtl_asr_st_ctcst.yaml) with your local address of StreamSpeech repo.
 
 #### (2) Test Data
 
@@ -114,8 +114,8 @@ Run these scripts to inference StreamSpeech on streaming ASR, simultaneous S2TT 
 ```shell
 export CUDA_VISIBLE_DEVICES=0
 
-ROOT=/data/zhangshaolei/StreamSpeech # path to StreamSpeech repo
-PRETRAIN_ROOT=/data/zhangshaolei/pretrain_models 
+ROOT=/content/StreamSpeech # path to StreamSpeech repo
+PRETRAIN_ROOT=/content/pretrain_models 
 VOCODER_CKPT=$PRETRAIN_ROOT/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/g_00500000 # path to downloaded Unit-based HiFi-GAN Vocoder
 VOCODER_CFG=$PRETRAIN_ROOT/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/config.json # path to downloaded Unit-based HiFi-GAN Vocoder
 
@@ -148,7 +148,7 @@ fairseq plugins loaded...
 2024-06-06 09:45:46 | INFO     | fairseq.tasks.speech_to_speech | dictionary size: 1,004
 import agents...
 Removing weight norm...
-2024-06-06 09:45:50 | INFO     | agent.tts.vocoder | loaded CodeHiFiGAN checkpoint from /data/zhangshaolei/pretrain_models/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/g_00500000
+2024-06-06 09:45:50 | INFO     | agent.tts.vocoder | loaded CodeHiFiGAN checkpoint from /content/pretrain_models/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/g_00500000
 2024-06-06 09:45:50 | INFO     | simuleval.utils.agent | System will run on device: gpu.
 2024-06-06 09:45:50 | INFO     | simuleval.dataloader | Evaluating from speech to speech.
   0%|                                                                                                                                                                              | 0/2 [00:00<?, ?it/s]
@@ -201,7 +201,7 @@ Streaming ASR: jai donc expérience des années passé jen dirairai un mot tout 
 Simultaneous translation: i therefore have an experience of last years i will tell a word later
 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:06<00:00,  3.02s/it]
 2024-06-06 09:45:56 | WARNING  | simuleval.scorer.asr_bleu | Beta feature: Evaluating speech output. Faieseq is required.
-2024-06-06 09:46:12 | INFO | fairseq.tasks.audio_finetuning | Using dict_path : /data/zhangshaolei/.cache/ust_asr/en/dict.ltr.txt
+2024-06-06 09:46:12 | INFO | fairseq.tasks.audio_finetuning | Using dict_path : /content/.cache/ust_asr/en/dict.ltr.txt
 Transcribing predictions: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:01<00:00,  1.63it/s]
 2024-06-06 09:46:21 | INFO     | simuleval.sentence_level_evaluator | Results:
  ASR_BLEU       AL    AL_CA    AP  AP_CA      DAL  DAL_CA  StartOffset  StartOffset_CA  EndOffset  EndOffset_CA     LAAL  LAAL_CA      ATD   ATD_CA  NumChunks  NumChunks_CA  DiscontinuitySum  DiscontinuitySum_CA  DiscontinuityAve  DiscontinuityAve_CA  DiscontinuityNum  DiscontinuityNum_CA   RTF  RTF_CA
@@ -234,7 +234,7 @@ $output_dir/chunk_size=$chunk_size
 ```shell
 export CUDA_VISIBLE_DEVICES=0
 
-ROOT=/data/zhangshaolei/StreamSpeech # path to StreamSpeech repo
+ROOT=/content/StreamSpeech # path to StreamSpeech repo
 
 LANG=fr
 file=streamspeech.simultaneous.${LANG}-en.pt # path to downloaded StreamSpeech model
@@ -260,7 +260,7 @@ PYTHONPATH=$ROOT/fairseq simuleval --data-bin ${ROOT}/configs/${LANG}-en \
 ```shell
 export CUDA_VISIBLE_DEVICES=0
 
-ROOT=/data/zhangshaolei/StreamSpeech # path to StreamSpeech repo
+ROOT=/content/StreamSpeech # path to StreamSpeech repo
 
 LANG=fr
 file=streamspeech.simultaneous.${LANG}-en.pt # path to downloaded StreamSpeech model

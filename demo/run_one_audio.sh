@@ -1,7 +1,7 @@
 export CUDA_VISIBLE_DEVICES=0
 
-ROOT=/data/zhangshaolei/StreamSpeech # path to StreamSpeech repo
-PRETRAIN_ROOT=/data/zhangshaolei/pretrain_models 
+ROOT=/content/StreamSpeech # path to StreamSpeech repo
+PRETRAIN_ROOT=/content/pretrain_models 
 VOCODER_CKPT=$PRETRAIN_ROOT/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/g_00500000 # path to downloaded Unit-based HiFi-GAN Vocoder
 VOCODER_CFG=$PRETRAIN_ROOT/unit-based_HiFi-GAN_vocoder/mHuBERT.layer11.km1000.en/config.json # path to downloaded Unit-based HiFi-GAN Vocoder
 

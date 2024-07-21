@@ -1,4 +1,4 @@
-ROOT=/kaggle/working/StreamSpeech
+ROOT=/content/StreamSpeech
 PRETRAIN_ROOT=$ROOT/pretrain_models
 
 

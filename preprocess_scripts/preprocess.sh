@@ -1,6 +1,6 @@
 lang=ta
 
-ROOT=/kaggle/working/StreamSpeech
+ROOT=/content/StreamSpeech
 PREPROCESS_ROOT=$ROOT/preprocess_scripts
 
 bash $PREPROCESS_ROOT/1.learn_KM_clustering_model.sh $lang

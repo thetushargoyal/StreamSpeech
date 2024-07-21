@@ -1,5 +1,5 @@
 global_cmvn:
-  stats_npz_path: /content/datasets/cvss/cvss-c/ta-en/gcmvn.npz 
+  stats_npz_path: /content/datasets/cvss/cvss-c/hi-en/gcmvn.npz 
 input_channels: 1
 input_feat_per_channel: 80
 specaugment:
