@@ -57,8 +57,8 @@ class CoVoST(Dataset):
     SPLITS = ["train", "dev", "test"]
 
     XX_EN_LANGUAGES = {
-        1: ["fr", "de", "nl", "ru", "es", "it", "tr", "fa", "sv-SE", "mn", "zh-CN"],
-        2: [
+        1: ["hi", "fr", "de", "nl", "ru", "es", "it", "tr", "fa", "sv-SE", "mn", "zh-CN"],
+        2: ["hi",
             "fr",
             "de",
             "es",
@@ -84,7 +84,7 @@ class CoVoST(Dataset):
     }
     EN_XX_LANGUAGES = {
         1: [],
-        2: [
+        2: ["hi"
             "de",
             "tr",
             "fa",

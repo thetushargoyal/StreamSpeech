@@ -1,4 +1,4 @@
-lang=ta
+lang=hi
 
 ROOT=/content/StreamSpeech
 PREPROCESS_ROOT=$ROOT/preprocess_scripts

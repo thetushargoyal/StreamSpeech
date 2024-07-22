@@ -7,4 +7,4 @@ PYTHONPATH=$ROOT/fairseq python $ROOT/preprocess_scripts/prep_cvss_c_multitask_d
     --output-dir $CVSS_ROOT/${lang}-en/src_unigram6000 \
     --lang $lang \
     --is-src-text \
-    --vocab-type unigram --vocab-size 1900
+    --vocab-type unigram --vocab-size 1400
