@@ -1,6 +1,6 @@
 target_unigram:
    decoder_type: transformer
-   dict: /content/StreamSpeech/configs/hi-en/tgt_unigram6000/spm_unigram_fr.txt
+   dict: /content/StreamSpeech/configs/hi-en/tgt_unigram6000/spm_unigram_hi.txt
    data: /content/StreamSpeech/configs/hi-en/tgt_unigram6000
    loss_weight: 8.0
    rdrop_alpha: 0.0
