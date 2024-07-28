@@ -21,7 +21,6 @@ from ctc_unity.modules.transformer_decoder import TransformerDecoder
 
 logger = logging.getLogger(__name__)
 
-
 class CTCTransformerUnitDecoder(TransformerDecoder):
     """Based on Transformer decoder, with support to decoding stacked units"""
 

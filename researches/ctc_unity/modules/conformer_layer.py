@@ -18,7 +18,6 @@ from uni_unity.modules.espnet_multihead_attention import (
 
 from fairseq.utils import get_activation_fn
 
-
 class ConvolutionModule(torch.nn.Module):
     """Convolution block used in the conformer block"""
 
@@ -100,8 +99,6 @@ class ConvolutionModule(torch.nn.Module):
         x = self.pointwise_conv2(x)
         x = self.dropout(x)
         return x.transpose(1, 2)
-
-
 class FeedForwardModule(torch.nn.Module):
     """Positionwise feed forward layer used in conformer"""
 
@@ -145,8 +142,6 @@ class FeedForwardModule(torch.nn.Module):
         x = self.dropout1(x)
         x = self.w_2(x)
         return self.dropout2(x)
-
-
 class UniConformerEncoderLayer(torch.nn.Module):
     """Conformer block based on https://arxiv.org/abs/2005.08100. We currently don't support relative positional encoding in MHA"""
 
@@ -291,8 +286,6 @@ class UniConformerEncoderLayer(torch.nn.Module):
 
         x = self.final_layer_norm(x)
         return x, (attn, layer_result)
-
-
 class ConformerWav2Vec2EncoderLayer(UniConformerEncoderLayer):
     """Encoder layer for Wav2vec2 encoder"""
 

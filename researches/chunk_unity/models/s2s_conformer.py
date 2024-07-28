@@ -23,13 +23,9 @@ def build_s2s_chunk_conformer_encoder(args):
     pretraining_path = getattr(args, "load_pretrained_encoder_from", None)
     if pretraining_path is not None:
         if not Path(pretraining_path).exists():
-            logger.warning(
-                f"skipped pretraining because {pretraining_path} does not exist"
-            )
+            logger.warning(f"skipped pretraining because {pretraining_path} does not exist")
         else:
-            encoder = checkpoint_utils.load_pretrained_component_from_model(
-                component=encoder, checkpoint=pretraining_path
-            )
+            encoder = checkpoint_utils.load_pretrained_component_from_model(component=encoder, checkpoint=pretraining_path)
             logger.info(f"loaded pretrained encoder from: {pretraining_path}")
     return encoder
 

@@ -108,7 +108,7 @@ class CoVoST(Dataset):
     }
     EN_XX_LANGUAGES = {
         1: [],
-        2: [
+        2: ["hi",
             "de",
             "tr",
             "fa",
@@ -410,6 +410,7 @@ def main():
         "--src-lang",
         default="all",
         choices=[
+            "hi",
             "fr",
             "de",
             "es",

@@ -544,6 +544,7 @@ def main():
         "--src-lang",
         default="all",
         choices=[
+            "hi",
             "fr",
             "de",
             "es",

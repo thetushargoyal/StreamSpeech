@@ -7,10 +7,8 @@ from ctc_unity.datasets.speech_to_speech_dataset_modified import (
 )
 from ctc_unity.datasets.speech_to_speech_data_cfg_modified import S2SDataConfigModified
 
-
 @register_task("speech_to_speech_ctc")
 class SpeechToSpeechCTCTask(SpeechToSpeechTask):
-
     def __init__(self, args, tgt_dict, infer_tgt_lang_id=None):
         tgt_blank_index = tgt_dict.add_symbol("<blank>")
         self.tgt_dict = tgt_dict

@@ -21,9 +21,7 @@ from ctc_unity.modules.ctc_decoder_with_transformer_layer import (
     CTCDecoderWithTransformerLayer,
 )
 from fairseq.models.speech_to_speech.modules.stacked_embedding import StackedEmbedding
-from fairseq.models.speech_to_speech.modules.transformer_decoder_aug import (
-    AugTransformerUnitDecoder,
-)
+
 from ctc_unity.modules.transformer_encoder import (
     UniTransformerEncoderNoEmb,
 )
@@ -32,9 +30,7 @@ from fairseq.models.speech_to_speech.s2s_transformer import (
     base_multitask_text_transformer_decoder_arch,
     s2ut_architecture_base,
 )
-from chunk_unity.models.s2s_transformer import (
-    TransformerUnitDecoder,
-)
+
 from fairseq.models.transformer import TransformerModelBase
 from ctc_unity.modules.transformer_decoder import TransformerDecoder
 from ctc_unity.modules.ctc_transformer_unit_decoder import CTCTransformerUnitDecoder
@@ -389,9 +385,7 @@ class StreamSpeechModel(ChunkS2UTConformerModel):
             )
         if return_all_hiddens:
             decoder_out[-1]["encoder_states"] = encoder_out["encoder_states"]
-            decoder_out[-1]["encoder_padding_mask"] = encoder_out[
-                "encoder_padding_mask"
-            ]
+            decoder_out[-1]["encoder_padding_mask"] = encoder_out["encoder_padding_mask"]
         decoder_out[-1]["mt_decoder_out"] = mt_decoder_out
         return decoder_out
 

@@ -228,8 +228,6 @@ class TransformerEncoderLayerBase(nn.Module):
         if self.return_fc and not torch.jit.is_scripting():
             return x, fc_result
         return x
-
-
 # backward compatible with the legacy argparse format
 class TransformerEncoderLayer(TransformerEncoderLayerBase):
     def __init__(self, args):
@@ -240,8 +238,6 @@ class TransformerEncoderLayer(TransformerEncoderLayerBase):
         return super().build_self_attention(
             embed_dim, TransformerConfig.from_namespace(args)
         )
-
-
 class TransformerDecoderLayerBase(nn.Module):
     """Decoder layer block.
 
@@ -552,8 +548,6 @@ class TransformerDecoderLayerBase(nn.Module):
 
     def make_generation_fast_(self, need_attn: bool = False, **kwargs):
         self.need_attn = need_attn
-
-
 # backward compatible with the legacy argparse format
 class TransformerDecoderLayer(TransformerDecoderLayerBase):
     def __init__(
